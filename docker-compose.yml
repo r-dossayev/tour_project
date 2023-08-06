@@ -18,17 +18,17 @@ services:
             dockerfile: _docker/app/Dockerfile
         volumes:
             - ./:/var/www
-        depends_on:
-            - db
+#        depends_on:
+#            - db
         container_name: tour_app
 
-    db:
-        image: mysql:latest
-        restart: always
-        environment:
-            MYSQL_DATABASE: tour_db
-            MYSQL_ROOT_PASSWORD: root
-        ports:
-            - 8101:3306
-        command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
-        container_name: tour_db
+#    db:
+#        image: mysql:latest
+#        restart: always
+#        environment:
+#            MYSQL_DATABASE: tour_db
+#            MYSQL_ROOT_PASSWORD: root
+#        ports:
+#            - 8101:3306
+#        command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
+#        container_name: tour_db
