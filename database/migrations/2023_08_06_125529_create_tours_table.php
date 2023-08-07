@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string("title")->unique();
             $table->boolean("isActive")->default(false);
-            $table->boolean("isPending")->default(false);
-            $table->json("info"); //  language {"kz":"bla", "ru":"bla"}
+            $table->boolean("status")->default(false);
+            $table->json("data"); //  language {"kz":"bla", "ru":"bla"}
             $table->string("pickup_point");
             $table->timestamp("start_time");
             $table->timestamp("end_time");
