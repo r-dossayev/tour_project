@@ -10,7 +10,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/test', function () {
     return view('test');
 })->name('home');
- 
+
+Route::get('/qwe', function () {
+    return view('tour.layouts.base');
+})->name('tor');
+
 Route::get('/',[MainController::class, 'index'] )->name('tour.index');
 
 // for login and register
