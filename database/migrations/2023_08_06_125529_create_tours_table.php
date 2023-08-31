@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('tours', function (Blueprint $table) {
             $table->id();
             $table->string("title")->unique();
-            $table->boolean("isActive")->default(false);
+            $table->boolean("isActive")->default(false);  // refactoring to is_active
             $table->boolean("status")->default(false);
-            $table->json("data"); //  language {"kz":"bla", "ru":"bla"}
+            $table->json("data"); //  in future language {"kz":"bla", "ru":"bla"}
             $table->string("pickup_point");
             $table->timestamp("start_time");
             $table->timestamp("end_time");

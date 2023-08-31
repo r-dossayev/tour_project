@@ -1,18 +1,9 @@
 <?php
 
+use App\Http\Controllers\API\Tour\TourController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
@@ -23,8 +14,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 //Route::post('register', 'API\RegisterController@register');
 //Route::post('login', 'API\RegisterController@login');
 
-//Route::middleware('auth:api')->group( function () {
-//    Route::resource('products', 'API\ProductController');
-//});
+Route::get('/tours', [TourController::class, 'index']); // uri: (/api/tours) // get all tours
 
 
+
+
+
+//https://blog.devgenius.io/rest-api-in-laravel-354d755a553a

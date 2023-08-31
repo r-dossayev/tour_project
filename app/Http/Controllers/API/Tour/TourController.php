@@ -1,18 +1,19 @@
 <?php
 namespace App\Http\Controllers\API\Tour;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\API\BaseController as BaseController;
-use Validator;
+use App\Http\Resources\Tour\TourResource;
+use App\Models\Tour\Tour;
+//use Validator;
 
 class TourController extends BaseController
 {
 
-//    public function index()
-//    {
-//        $products = Product::all();
-//        return $this->sendResponse(ProductResource::collection($products), 'Products Retrieved Successfully.');
-//    }
+    public function index()
+    {
+        $products = Tour::all();
+        return $this->sendResponse(TourResource::collection($products), 'Products Retrieved Successfully.');
+    }
 
 
     public function create()
