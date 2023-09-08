@@ -3,7 +3,7 @@ namespace App\Http\Controllers\API\Tour;
 
 use App\Http\Controllers\API\BaseController as BaseController;
 use App\Http\Resources\Tour\TourResource;
-use App\Models\Tour\Tour;
+use App\Models\Core\Tour;
 //use Validator;
 
 class TourController extends BaseController

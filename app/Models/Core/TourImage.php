@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Models\Tour;
+namespace App\Models\Core;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class TourImage extends Model
 {
     use HasFactory;
 }

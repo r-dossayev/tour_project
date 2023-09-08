@@ -3,7 +3,7 @@ namespace App\Http\Controllers\API\City;
 
 use App\Http\Controllers\API\BaseController as BaseController;
 use App\Http\Resources\City\CityResource;
-use App\Models\Tour\City;
+use App\Models\Core\City;
 
 
 //use Validator;

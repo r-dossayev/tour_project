@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Tour;
 
 use App\Http\Controllers\Controller;
-use App\Models\Tour\Tour;
+use App\Models\Core\Tour;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 

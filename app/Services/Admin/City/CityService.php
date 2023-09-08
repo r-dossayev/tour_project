@@ -3,7 +3,7 @@
 namespace App\Services\Admin\City;
 
 
-use App\Models\Tour\City;
+use App\Models\Core\City;
 
 class CityService
 {

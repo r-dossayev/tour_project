@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Models\Tour;
+namespace App\Models\Core;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TourImage extends Model
+class City extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
 }
