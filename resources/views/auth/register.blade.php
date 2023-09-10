@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('tour.layouts.base')
 
 @section('content')
 <div class="container">

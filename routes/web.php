@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/test', function () {
     return view('test');
-})->name('home');
+})->name('home12');
 
 Route::get('/qwe', function () {
     return view('tour.layouts.base');
@@ -33,6 +33,6 @@ Route::get('/user/d', [CityController::class, 'dUsers'])->name('qweqwe');
 Route::get('/admin/city/create', [CityController::class, 'createView'])->name('admin.city.create.view');
 Route::post('/admin/city/store', [CityController::class, 'create'])->name('admin.city.store');
 
-Auth::routes();
+Auth::routes( ['verify' => true]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
