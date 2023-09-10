@@ -4,6 +4,8 @@ namespace App\Http\Controllers\API\Tour;
 use App\Http\Controllers\API\BaseController as BaseController;
 use App\Http\Resources\Tour\TourResource;
 use App\Models\Core\Tour;
+use App\Models\User;
+
 //use Validator;
 
 class TourController extends BaseController
@@ -15,6 +17,9 @@ class TourController extends BaseController
         return $this->sendResponse(TourResource::collection($products), 'Products Retrieved Successfully.');
     }
 
+    public function users(){
+        return $this->sendResponse(User::all(), 'Users Retrieved Successfully.');
+    }
 
     public function create()
     {

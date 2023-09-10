@@ -3,31 +3,38 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Auth\LoginRequest;
-use Auth;
-use Illuminate\Http\Request;
+use App\Providers\RouteServiceProvider;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
-    // login view for user
-    public function create()
+    /*
+    |--------------------------------------------------------------------------
+    | Login Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller handles authenticating users for the application and
+    | redirecting them to your home screen. The controller uses a trait
+    | to conveniently provide its functionality to your applications.
+    |
+    */
+
+    use AuthenticatesUsers;
+
+    /**
+     * Where to redirect users after login.
+     *
+     * @var string
+     */
+    protected $redirectTo = RouteServiceProvider::HOME;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
     {
-        return view('auth.login');
-    }
-
-    // login to site logic for user
-    public function login(LoginRequest $request){
-        if(Auth::check()){
-            return redirect()->intended('index');
-        }
-        if (Auth::attempt($request->validated())) {
-            return redirect()->intended('/');
-        }
-        return back()->withErrors('Incorrect email or password');
-    }
-
-    public function logout(){
-        Auth::logout();
-        return redirect()->route('login.form');
+        $this->middleware('guest')->except('logout');
     }
 }

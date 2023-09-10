@@ -10,4 +10,12 @@ class City extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    protected $attributes = [
+        'name' => null,
+        'data' => null,
+
+    ];
+
+
 }

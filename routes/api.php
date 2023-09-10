@@ -16,6 +16,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 //Route::post('login', 'API\RegisterController@login');
 
 Route::get('/tours', [TourController::class, 'index']); // uri: (/api/tours) // get all tours
+Route::get('/users', [TourController::class, 'users']); // uri: (/api/tours) // get all tours
 Route::get('/cities', [CityController::class, 'index']); // uri: (/api/tours) // get all tours
 
 
